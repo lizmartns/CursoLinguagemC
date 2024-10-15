@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+// compilação via terminal
+// gcc arquivo fonte(opcional) -o nome.programa
+// gcc nome_do_programa.c - o nome-do-programa-executável.qualquercoisa
 int main(){
     int qtd, soma=0;
     printf("Quantos números você quer somar?");
