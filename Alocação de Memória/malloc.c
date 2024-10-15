@@ -1,18 +1,31 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(){
-     int numeros[3];
-     numeros[0] = 55;
-     numeros[1] = 43;
-     numeros[2] = 2;
 
-     printf("A variável 'numero' vale %d e ocupa %ld bytes em memoria\n", numeros[0], sizeof(numeros[0]));
+	int qtd, *p;
 
-     printf("A variável 'numero' vale %d e ocupa %ld bytes em memoria\n", numeros[1], sizeof(numeros[1]));
+	printf("Informe a quantidade de elementos para o vetor: ");
+	scanf("%d", &qtd);
 
-     printf("A variável 'numero' vale %d e ocupa %ld bytes em memoria\n", numeros[2], sizeof(numeros[2]));
+	p = (int*)malloc(qtd * sizeof(int)); //3 x 4 == 12 bytes
 
-      printf("A variável 'numero' ocupa %ld bytes em memoria", sizeof(numeros));
+	for(int i = 0; i < qtd; i++){
+		printf("Informe o valor para a posição %d do vetor: ", i);
+		scanf("%d", &p[i]);
+	}
 
-     return 0;
+
+	for(int i = 0; i < qtd; i++){
+		printf("No vetor 'numeros[%d]' está o valor %d: \n", i, p[i]);
+	}
+
+	printf("A variável 'p' ocupa %ld bytes em memória.\n", qtd * sizeof(int));
+
+	//liberar a memória (desalocar)
+	free(p);
+	p = NULL; //medida de segurança
+
+
+	return 0;
 }
