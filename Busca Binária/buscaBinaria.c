@@ -4,7 +4,15 @@
 int busca_binaria(int vetor[], int chave, int tam){
     int inicio = 0;
     int fim = tam-1;
-    
+
+    while(inicio <= fim){
+
+        int meio = (inicio +fim)/2;
+
+        if(chave == vetor[meio]){
+            return meio;
+        }
+    }
 }
 int main(){
     // vetor ordenado
