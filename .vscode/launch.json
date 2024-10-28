@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/CursoLinguagemC/Structs",
-      "program": "c:/CursoLinguagemC/Structs/build/Debug/outDebug",
+      "cwd": "c:/CursoLinguagemC/Funções",
+      "program": "c:/CursoLinguagemC/Funções/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
