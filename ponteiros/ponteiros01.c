@@ -1,16 +1,34 @@
 #include <stdio.h>
+//hardware/lógico/memória
 
-// ponteiros -
-void incrementa (int* valor){
+//endereço de memória como parâmetro de entrada
+void incrementa(int* contador){
+	printf("Antes de incrementar.\n");
+	printf("O contador vale %d\n", (*contador)); //valor
+	printf("O endereço de memória é %d\n", contador); //endereço de memória
 
+	printf("Depois de incrementar.\n");
+	printf("O contador vale %d\n", ++(*contador));
+	printf("O endereço de memória é %d\n", contador);
 }
 
 int main(){
-    int contador = 10;
+	// quando declaramos uma variável, a linguagem c
+	// aloca um espaco em memória para colocar
+	// este valor.
+	int contador = 10;
 
-    printf("O contador vale %d", contador);
+	printf("Antes de incrementar.\n");
+	printf("O contador vale %d\n", contador);
+	printf("O endereço de memória é %d\n", &contador);
 
-    incrementa(contador);
-    printf("Depois de incrementar.\n");
-    printf("O contador vale %d", contador);
+	//cópia por valor
+	incrementa(&contador);
+	//scanf("%d", &contador);
+
+	printf("Depois de incrementar.\n");
+	printf("O contador vale %d\n", contador);
+	printf("O endereço de memória é %d\n", &contador);
+
+	return 0;
 }
